@@ -1,0 +1,81 @@
+
+
+npm install -g yo
+
+
+npm i -g generator-oss-project
+
+////
+
+criando projeto
+
+yo oss-project
+
+///// install express no projeto
+
+npm i express 
+
+npm i uuid   //para gerar chave e valor no redis
+
+npm i ioredis //biblioteca para usar o redis
+
+npm i cors  //biblioteca para as chamadas entre aplicações acessando portas
+
+npm i body-parser //para tratar dados da requisição
+
+////////////////////////
+
+
+build project
+
+node .\src\index.js
+
+
+
+/////
+
+
+comandos no redis
+
+
+//Para ver quais keys existem dentro do redis
+Keys *
+
+// Para ver o valor dentro da chave/Key
+get number da key 
+
+//Verificar se a Key existe mesmo (Se retornar 1 o valor existe, se retornar 0 o valor não existe)
+exists 10    
+
+
+//add uma chave com o valor
+set chave-1 "valor 1"
+
+// criando uma key com tempo para expirar
+set key2 "valor2" 'EX' 100
+
+//colocando tempo para expirar em uma key já criada 
+expire chave-3 30
+
+//Atualizando a key chave-3 colocando tempo para expirar em uma //key já criada 
+expire chave-3 30
+
+
+//deletar um valor no redis pela key
+del chave1 chave2
+
+
+
+////////////// biblioteca para publicação usada no linux
+
+npm install pm2 -g
+
+pm2 list
+
+pm2 start index.js
+
+pm2 monit
+
+pm2 restart 2 //id da aplicação no sistema pm2
+
+pm2 stop 2 //para a aplicação rodando

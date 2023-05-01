@@ -1,0 +1,9 @@
+{
+  "generator-oss-project": {
+    "promptValues": {
+      "name": "apiteste",
+      "email": "johnbueno@gmail",
+      "username": "exit"
+    }
+  }
+}
